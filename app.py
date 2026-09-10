@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 import json
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-  return "this is the home page please go to (/api) page "
+  return render_template("form.html")
 
 
 @app.route("/api")
