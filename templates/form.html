@@ -54,7 +54,7 @@
 
     <div class="todo-form">
         <h2>Add To-Do Item</h2>
-        <form action="#" method="POST">
+        <form action="/addtask" method="POST">
             <!-- Item Name Field -->
             <div class="form-group">
                 <label for="itemname">Item Name</label>
@@ -65,6 +65,14 @@
                 <label for="itemname">Item ID</label>
                 <input type="text" id="itemid" name="itemid" required placeholder="Enter task id">
             </div>
+            <div class="form-group">
+                <label for="itemname">UUID</label>
+                <input type="text" id="uuid" name="uuid" required placeholder="Enter uuid">
+            </div>
+            <div class="form-group">
+                <label for="itemname">Item Hash</label>
+                <input type="text" id="itemhash" name="itemhash" required placeholder="Enter hash">
+            </div>
 
             <!-- Description Field -->
             <div class="form-group">
@@ -73,7 +81,7 @@
             </div>
 
             <!-- Submit Button -->
-            <button type="submit">Add Task</button>
+            <button type="submit" >Add Task</button>
         </form>
     </div>
 
