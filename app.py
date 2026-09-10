@@ -1,7 +1,5 @@
-from flask import Flask, request, redirect
-from flask import Flask, render_template
+from flask import Flask, request, redirect, render_template
 import json
-
 app = Flask(__name__)
 
 @app.route("/")
@@ -15,7 +13,7 @@ def api():
     data = json.load(file)
     return data
 
-@app.route("/addtask")
+@app.route("/addtask", methods=["POST"])
 def tasks():
   new_item = {
         "itemname": request.form.get("itemname"),
@@ -23,7 +21,6 @@ def tasks():
     }
   with open("data.json", "r" ) as file:
     data = json.load(file)
-    data = []
 
   data.append(new_item)
   with open("data.json", "w") as f:
